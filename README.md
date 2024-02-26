@@ -88,6 +88,62 @@ F H <BR>
 <hr>
 ['0', '1', '2', '3', '4']
 
+<h3>Program:</h3>
+```
+import defaultdict
+from collections import defaultdict
+def dfs(graph,start,visited,path):
+    path.append(start)
+    visited[start]=True
+    for neighbour in graph[start]:
+        if visited[neighbour]==False:
+            dfs(graph,neighbour,visited,path)
+            visited[neighbour]=True
+    return path
+graph=defaultdict(list)
+n,e=map(int,input().split())
+for i in range(e):
+    u,v=map(str,input().split())
+    graph[u].append(v)
+    graph[v].append(u)
+#print(graph)
+start='A'
+visited=defaultdict(bool)
+path=[]
+traversedpath=dfs(graph,start,visited,path)
+print(traversedpath)
+```
+```
+from collections import defaultdict
+def dfs(graph,start,visited,path):
+    path.append(start)
+    visited[start]=True
+    for neighbour in graph[start]:
+        if visited[neighbour]==False:
+            dfs(graph,neighbour,visited,path)
+            visited[neighbour]=True
+    return path
+graph=defaultdict(list)
+n,e=map(int,input().split())
+for i in range(e):
+    u,v=map(str,input().split())
+    graph[u].append(v)
+    graph[v].append(u)
+#print(graph)
+start='0'
+visited=defaultdict(bool)
+path=[]
+traversedpath=dfs(graph,start,visited,path)
+print(traversedpath)
+```
+
+
+<h3>Output:</h3>
+
+![307608781-d5562f99-b2e1-49df-be8b-9993ca9adf90](https://github.com/SivaChandranR07/19AI405ExpNo2/assets/113497395/2ddcfe02-bc9c-4363-937b-f772defe1efe)
+
+
+
 <hr>
 <h3>Result:</h3>
 <hr>

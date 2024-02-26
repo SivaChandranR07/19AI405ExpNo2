@@ -88,7 +88,7 @@ F H <BR>
 <hr>
 ['0', '1', '2', '3', '4']
 
-<h3>Program:</h3>
+### Program:
 ```
 import defaultdict
 from collections import defaultdict
@@ -113,7 +113,7 @@ path=[]
 traversedpath=dfs(graph,start,visited,path)
 print(traversedpath)
 ```
-```
+```import defaultdict
 from collections import defaultdict
 def dfs(graph,start,visited,path):
     path.append(start)
